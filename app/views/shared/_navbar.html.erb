@@ -1,0 +1,17 @@
+<nav class="fixed flex items-center justify-between w-full p-5 bg-black">
+    <div class="flex items-center gap-5">
+        <%= image_tag('book_icon',class: 'w-12')%>
+        <h3 class="text-lg font-bold text-white">The BookStore App</h3>
+    </div>
+    <div class="flex">
+        <%= turbo_frame_tag 'new_record_component', class: 'flex gap-5' do %>
+            <%= link_to '#', id: 'sell_link', class: 'text-white font-semibold text-sm text-center bg-green-700 text-white p-2 rounded cursor-pointer' do %>
+                Add Sell 
+            <% end %>
+            
+            <%= link_to new_book_path, id: 'book_link', class: 'text-white font-semibold text-sm text-center bg-blue-700 text-white p-2 rounded cursor-pointer' do %>
+                Add New Book 
+            <% end %>
+        <% end %>
+    </div>
+</nav>
