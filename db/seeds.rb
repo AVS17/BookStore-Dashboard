@@ -7,7 +7,19 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 book = Book.create(name: 'Harry Potter', price: 29.99)
+book2 = Book.create(name: 'Minions', price: 39.99)
+book3 = Book.create(name: 'The world', price: 19.99)
 
-30.times do
+10.times do
     book.sells << Sell.create(quantity: rand(2..15), day: Sell::DAYS[rand(0..(Sell::DAYS.length))])
 end
+
+10.times do
+    book2.sells << Sell.create(quantity: rand(2..15), day: Sell::DAYS[rand(0..(Sell::DAYS.length))])
+end
+
+10.times do
+    book3.sells << Sell.create(quantity: rand(2..15), day: Sell::DAYS[rand(0..(Sell::DAYS.length))])
+end
+
+
